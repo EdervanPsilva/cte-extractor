@@ -9,3 +9,4 @@ pycache/
 dist/
 build/
 *.spec
+venv/
