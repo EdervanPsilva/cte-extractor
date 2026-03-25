@@ -19,16 +19,10 @@ python -m venv venv
 Isso cria uma pasta chamada venv com o ambiente virtual.
 
 # Passo 2 – Ativar a venv
-No Windows:
+No CMD:
 
 ```bash
 venv\Scripts\activate.bat
-```
-
-No PowerShell:
-
-```bash
-venv\Scripts\Activate.ps1
 ```
 Você vai ver (venv) no início da linha, indicando que está ativo.
 
@@ -42,13 +36,13 @@ python -m pip install -r requirements.txt
 Antes de compilar, rode para garantir que funciona:
 
 ```bash
-python app.py
+python src/app.py
 ```
 # Passo 5 – Gerar o executável
 Com tudo funcionando, rode:
 
 ```bash
-python -m PyInstaller --onefile --noconsole app.py
+python -m PyInstaller --onefile --noconsole src/app.py
 ```
 
 --onefile → gera um único .exe
