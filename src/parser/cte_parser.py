@@ -46,11 +46,13 @@ def extrair_dados_cte(file_path):
         "vICMS": get_text_or_none(root_xml, ".//ns:imp/ns:ICMS/ns:ICMS00/ns:vICMS", ns) or \
                  get_text_or_none(root_xml, ".//ns:imp/ns:ICMS/ns:ICMSOutraUF/ns:vICMSOutraUF", ns),
 
-        # Chave da NF-e vinculada
-        "Chave NF-e": get_text_or_none(root_xml, ".//ns:infNFe/ns:chave", ns),
-
         # Observação
         "xObs": get_text_or_none(root_xml, ".//ns:xObs", ns)
     }
+
+    # Tratamento para múltiplas chaves NF-e
+    chaves = root_xml.findall(".//ns:infNFe/ns:chave", ns)
+    for i, chave in enumerate(chaves, start=1):
+        dados[f"Chave NF-e {i}"] = chave.text
 
     return dados

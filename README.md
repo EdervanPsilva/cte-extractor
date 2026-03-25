@@ -51,7 +51,6 @@ python -m PyInstaller --onefile --noconsole src/app.py
 # Passo 6 – Localizar o executável
 O arquivo final estará em:
 
-
 dist\app.exe
 Esse é o executável portátil que você pode distribuir.
 
