@@ -7,7 +7,7 @@ extração dos principais campos e exportação para Excel.
 - Interface gráfica simples (Tkinter)
 - Seleção de múltiplos arquivos XML
 - Extração de dados como número do CT-e, emitente, destinatário, valores, origem/destino
-- Exportação para Excel
+- Exportação para Excel ( Os arquivos serão salvos na pasta downloads com o nome resultado.xlsx)
 
 
 # Passo 1 – Criar a venv
