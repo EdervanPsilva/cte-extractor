@@ -9,10 +9,9 @@ extração dos principais campos e exportação para Excel.
 - Extração de dados como número do CT-e, emitente, destinatário, valores, origem/destino
 - Exportação para Excel
 
-## Como executar
+## Como instalar dependências
 ```bash
 python -m pip install -r requirements.txt
-python src/app.py
 ```
 
 
