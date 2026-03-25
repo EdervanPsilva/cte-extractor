@@ -9,11 +9,6 @@ extração dos principais campos e exportação para Excel.
 - Extração de dados como número do CT-e, emitente, destinatário, valores, origem/destino
 - Exportação para Excel
 
-## Como instalar dependências
-```bash
-python -m pip install -r requirements.txt
-```
-
 
 # Passo 1 – Criar a venv
 No prompt de comando (CMD ou PowerShell), dentro da pasta do seu projeto:
@@ -41,9 +36,8 @@ Você vai ver (venv) no início da linha, indicando que está ativo.
 Instale o PyInstaller e as bibliotecas que seu projeto usa:
 
 ```bash
-pip install pyinstaller
+python -m pip install -r requirements.txt
 ```
-
 # Passo 4 – Testar o app
 Antes de compilar, rode para garantir que funciona:
 
