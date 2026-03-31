@@ -11,6 +11,16 @@ def extrair_dados_cte(file_path):
     root_xml = tree.getroot()
 
     dados = {
+        # Número do CTe
+        "nCT": get_text_or_none(root_xml, ".//ns:ide/ns:nCT", ns),
+
+        # Data de emissão
+        "dhEmi": get_text_or_none(root_xml, ".//ns:ide/ns:dhEmi", ns),
+
+        # Data de vencimento
+        "dVenc": get_text_or_none(root_xml, ".//ns:cobr/ns:dup/ns:dVenc", ns),
+
+
         # Origem/Destino
         "cMunIni": get_text_or_none(root_xml, ".//ns:cMunIni", ns),
         "xMunIni": get_text_or_none(root_xml, ".//ns:xMunIni", ns),
@@ -48,6 +58,8 @@ def extrair_dados_cte(file_path):
 
         # Observação
         "xObs": get_text_or_none(root_xml, ".//ns:xObs", ns)
+
+
     }
 
     # Tratamento para múltiplas chaves NF-e
