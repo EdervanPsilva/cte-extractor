@@ -78,7 +78,7 @@ def iniciar_interface():
     lbl_info.pack(anchor="w")
 
     # Rodapé discreto
-    rodape = ttk.Label(root, text="© 2026 - Ferramenta de Processamento CT-e",
+    rodape = ttk.Label(root, text="© 2026 - SmartManufacturing",
                        font=("Segoe UI", 9), foreground="black", background="white")
     rodape.pack(side="bottom", pady=10)
 
