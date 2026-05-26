@@ -11,6 +11,9 @@ def extrair_dados_cte(file_path):
     root_xml = tree.getroot()
 
     dados = {
+        # ID do infCte
+        "infCte_Id": root_xml.find(".//ns:infCte", ns).get("Id") if root_xml.find(".//ns:infCte", ns) is not None else None,
+
         # Número do CTe
         "nCT": get_text_or_none(root_xml, ".//ns:ide/ns:nCT", ns),
 
@@ -47,6 +50,9 @@ def extrair_dados_cte(file_path):
         # Valores de prestação
         "vTPrest": get_text_or_none(root_xml, ".//ns:vPrest/ns:vTPrest", ns),
         "vRec": get_text_or_none(root_xml, ".//ns:vPrest/ns:vRec", ns),
+
+        # Descrição da carga
+        "proPred": get_text_or_none(root_xml, ".//ns:infCarga/ns:proPred", ns),
 
         # ICMS (tratando variações)
         "vBC": get_text_or_none(root_xml, ".//ns:imp/ns:ICMS/ns:ICMS00/ns:vBC", ns) or \
